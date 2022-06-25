@@ -1,6 +1,6 @@
 # RTZN React Template
 
-![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-0.1-dark.png?raw=true)
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-2-dark.png?raw=true)
 
 <br>
 
