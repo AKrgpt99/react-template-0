@@ -1,5 +1,7 @@
 # RTZN React Template
 
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-0.1-dark.png?raw=true)
+
 <br>
 
 ![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/public/logo.svg?raw=true)
@@ -9,10 +11,6 @@
 A basic ReactJS template with basic routing and pages set up. It is also Dockerized, allowing easy deployment to cloud services such as AWS, GCP, Azure, etc.
 
 Quick setup is described below using npm. Yarn will be implemented in the future.
-
-<br>
-
-![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-0.1-dark.png?raw=true)
 
 <br>
 
