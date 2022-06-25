@@ -1,0 +1,61 @@
+/* (c) 2022 RTZN Labs
+  - Version             1.0.0
+  - License             MIT
+  - Author              Nika K.
+  - Description         Define global styles, fonts, and colors for your application
+*/
+
+/* COLORS
+	- default body text   #ffffff
+	- subtitle h2 text    #ffffff
+	- form input borders  #9b41b2
+	- default p text      #ffffff
+	- pre borders         #9b41b2
+*/
+
+/* FONTS
+	- default body text   Montserrat, sans-serif
+	- subtitle h2 text    Montserrat, sans-serif
+	- form input text     Montserrat, sans-serif
+	- default p text      Montserrat, sans-serif
+	- pre and code        Montserrat, sans-serif
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* === GLOBAL SETTINGS === */
+:root {
+  --text-light: #fff;
+  --text-dark: #0a0a0a;
+  --background-light: #eee;
+  --background-dark: #1f1f1f;
+  --primary: #9b41b2;
+  --primary-light: #ce71e5;
+  --primary-dark: #6a0782;
+  --secondary: #323232;
+  --secondary-light: #5b5b5b;
+  --secondary-dark: #0a0a0a;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* === HEADINGS === */
+h1 {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+/* === PARAGRAPHS === */
+p {
+  line-height: 1.5rem;
+}
+
+/* === LINKS === */
+a {
+  text-decoration: none;
+}

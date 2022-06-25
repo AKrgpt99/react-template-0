@@ -1,4 +1,4 @@
-# RTZN React Client
+# RTZN React Template
 
 <br>
 
@@ -155,3 +155,28 @@ Coming soon.
 #### Yarn
 
 Coming soon.
+
+<br>
+<br>
+
+## Screenshots
+
+### Index Page
+
+#### Light
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-0-light.png?raw=true)
+
+#### Dark
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-0-dark.png?raw=true)
+
+### Not Found Page
+
+#### Light
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-1-light.png?raw=true)
+
+#### Dark
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-1-dark.png?raw=true)
