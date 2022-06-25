@@ -38,6 +38,7 @@
 - @svgr/webpack
 - assert
 - buffer
+- cross-env
 - dotenv
 - dotenv-webpack
 - https-browserify
