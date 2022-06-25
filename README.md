@@ -3,6 +3,10 @@
 ![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/public/logo.svg?raw=true)
 
 <br>
+
+A basic ReactJS template with basic routing and pages set up. It is also Dockerized, allowing easy deployment to cloud services such as AWS, GCP, Azure, etc.
+
+<br>
 <br>
 
 ## Dev Dependencies
