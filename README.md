@@ -11,6 +11,9 @@ A basic ReactJS template with basic routing and pages set up. It is also Dockeri
 Quick setup is described below using npm. Yarn will be implemented in the future.
 
 <br>
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-0.1-dark.png?raw=true)
+
 <br>
 
 ## Dev Dependencies
