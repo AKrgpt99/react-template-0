@@ -1,10 +1,14 @@
 # RTZN React Client
 
+<br>
+
 ![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/public/logo.svg?raw=true)
 
 <br>
 
 A basic ReactJS template with basic routing and pages set up. It is also Dockerized, allowing easy deployment to cloud services such as AWS, GCP, Azure, etc.
+
+Quick setup is described below using npm. Yarn will be implemented in the future.
 
 <br>
 <br>
@@ -91,3 +95,63 @@ A basic ReactJS template with basic routing and pages set up. It is also Dockeri
 ### Install Command
 
 `npm i react react-dom react-router-dom @reduxjs/toolkit react-redux react-jss clsx`
+
+<br>
+<br>
+
+## Quick Setup
+
+### Install All Dependencies
+
+#### NPM
+
+`npm i`
+
+#### Yarn
+
+Coming soon.
+
+<br>
+<br>
+
+## Running a Development Server
+
+### Run Scripts
+
+#### NPM
+
+`npm run dev`
+
+#### Yarn
+
+Coming soon.
+
+<br>
+<br>
+
+## Building the Project
+
+### Build Scripts
+
+#### NPM (Production)
+
+`npm run build`
+
+#### Yarn
+
+Coming soon.
+
+<br>
+<br>
+
+## Running a Production Server
+
+### Run Scripts
+
+#### NPM
+
+`npm start`
+
+#### Yarn
+
+Coming soon.
