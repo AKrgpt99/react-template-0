@@ -181,3 +181,33 @@ Coming soon.
 #### Dark
 
 ![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-1-dark.png?raw=true)
+
+### Index Page (Mobile)
+
+#### Light
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-3-light.png?raw=true)
+
+#### Dark
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-3-dark.png?raw=true)
+
+### Not Found Page (Mobile)
+
+#### Light
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-4-light.png?raw=true)
+
+#### Dark
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-4-light.png?raw=true)
+
+### Menu (Mobile)
+
+#### Light
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-5-light.png?raw=true)
+
+#### Dark
+
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-5-light.png?raw=true)

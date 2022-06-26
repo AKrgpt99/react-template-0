@@ -1,9 +1,20 @@
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
+  "@media screen and (max-width: 640px)": {
+    pageContainer: {
+      width: "calc(100% - 48px) !important",
+      paddingLeft: "24px !important",
+      paddingRight: "24px !important",
+    },
+  },
+  "@media screen and (min-width: 768px)": {},
+  "@media screen and (min-width: 1024px)": {},
+  "@media screen and (min-width: 1280px)": {},
+  "@media screen and (min-width: 1536px)": {},
   pageContainer: {
     width: ({ theme }) => `calc(100% - 2 * ${theme.spacing.body.left})`,
-    height: "calc(100vh - 48px)",
+    minHeight: "100vh",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -22,5 +33,6 @@ export const useStyles = createUseStyles({
     justifyContent: "center",
     alignItems: "center",
     gap: ({ theme }) => theme.spacing.body.left,
+    flexWrap: "wrap",
   },
 });
