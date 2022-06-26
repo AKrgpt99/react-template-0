@@ -23,6 +23,7 @@
     "babel-loader": "^8.2.5",
     "buffer": "^6.0.3",
     "css-loader": "^6.7.1",
+    "csv-loader": "^3.0.3",
     "dotenv": "^16.0.1",
     "dotenv-webpack": "^7.1.0",
     "file-loader": "^6.2.0",
@@ -41,6 +42,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
+    "axios": "^0.27.2",
     "clsx": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

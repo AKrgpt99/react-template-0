@@ -1,40 +1,17 @@
 import React from "react";
-import clsx from "clsx";
-import { useLocation } from "react-router-dom";
-import { useTheme } from "react-jss";
-import { useSelector } from "react-redux";
 
-import { useStyles } from "./styles";
+import Page from "../../components/page";
+import NotFound from "./NotFound";
 
-function NotFoundPage() {
-  const colorScheme = useSelector((state) => state.theme.colorScheme);
-  const theme = useTheme();
-  const classes = useStyles({ theme, colorScheme });
-  const location = useLocation();
-  const code = location.state.code;
+function NotFoundPage({ code }) {
   const views = {
-    404: (
-      <>
-        <div className={clsx(classes.illustration)}>
-          <div className="bg"></div>
-          <div className="astronaut">👩🏽‍🚀</div>
-        </div>
-        <div className={clsx(classes.text)}>
-          <h2>Houston, we have a problem.</h2>
-          <h3>404: Not Found</h3>
-          <p>
-            The page you're looking for doesn't seem to exist. Please check the
-            URL for any errors and try again.
-          </p>
-        </div>
-      </>
-    ),
+    404: <NotFound />,
   };
 
   return (
-    <div className={clsx(classes.pageContainer)}>
-      <div className={clsx(classes.section)}>{views[code]}</div>
-    </div>
+    <Page>
+      <Page.Section>{views[code]}</Page.Section>
+    </Page>
   );
 }
 

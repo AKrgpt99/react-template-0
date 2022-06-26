@@ -29,6 +29,18 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.csv$/,
+        loader: "csv-loader",
+        options: {
+          dynamicTyping: true,
+          header: true,
+          skipEmptyLines: true,
+          fastMode: true,
+          transform: (value, key) =>
+            key === "description" ? value.trim() : value,
+        },
+      },
     ],
   },
   resolve: {

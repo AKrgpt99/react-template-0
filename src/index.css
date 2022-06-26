@@ -58,4 +58,5 @@ p {
 /* === LINKS === */
 a {
   text-decoration: none;
+  color: var(--primary);
 }

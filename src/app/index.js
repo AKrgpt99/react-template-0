@@ -14,11 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<IndexPage />} />
-          <Route
-            path="*"
-            element={<Navigate to="error" state={{ code: 404 }} />}
-          />
-          <Route path="error" element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage code={404} />} />
         </Route>
         <Route path="privacy" element={<PrivacyPolicyPage />} />
       </Routes>

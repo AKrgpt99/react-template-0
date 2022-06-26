@@ -18,14 +18,25 @@ function Header() {
 
   return (
     <div className={clsx(classes.headerContainer)}>
-      <Link to="/" className={clsx(classes.containerLeft)}>
-        <div className={clsx(classes.logo)}>
-          <img src={colorScheme === "dark" ? Logo : LogoDark} alt="RTZN Logo" />
-        </div>
-        <div>
-          <h1 className={clsx(classes.title)}>ReactJS Starter</h1>
-        </div>
-      </Link>
+      <div className={clsx(classes.containerLeft)}>
+        <Link to="/" className={clsx(classes.logoContainer)}>
+          <div className={clsx(classes.logo)}>
+            <img
+              src={colorScheme === "dark" ? Logo : LogoDark}
+              alt="RTZN Logo"
+            />
+          </div>
+          <div>
+            <h1 className={clsx(classes.title)}>ReactJS Starter</h1>
+          </div>
+        </Link>
+        <Link to="blog" className={clsx(classes.navLink)}>
+          Blog
+        </Link>
+        <Link to="products" className={clsx(classes.navLink)}>
+          Products
+        </Link>
+      </div>
       <div className={clsx(classes.containerRight)}>
         <div>
           <p className={clsx(classes.caption)}>

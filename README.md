@@ -8,9 +8,9 @@
 
 <br>
 
-A basic ReactJS template with basic routing and pages set up. It is also Dockerized, allowing easy deployment to cloud services such as AWS, GCP, Azure, etc.
+A ReactJS template with basic routing, state management, and themed pages already set up to be customized. It is also Dockerized, allowing easy deployment to cloud services such as AWS, GCP, Azure, etc.
 
-Quick setup is described below using npm. Yarn will be implemented in the future.
+A quick setup guide is described below using npm. Yarn will be implemented in the future.
 
 <br>
 

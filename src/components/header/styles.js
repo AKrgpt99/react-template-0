@@ -19,6 +19,7 @@ export const useStyles = createUseStyles({
     width: "50%",
     height: "100%",
     display: "flex",
+    flexDirection: "row",
     justifyContent: "start",
     alignItems: "center",
     gap: "32px",
@@ -36,6 +37,16 @@ export const useStyles = createUseStyles({
     "& img": {
       height: "72px",
     },
+  },
+  logoContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "start",
+    alignItems: "center",
+    gap: "32px",
+  },
+  navLink: {
+    fontWeight: 600,
   },
   title: {
     color: ({ theme, colorScheme }) => theme.colors[colorScheme].text,

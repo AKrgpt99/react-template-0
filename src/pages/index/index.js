@@ -4,7 +4,8 @@ import { useTheme } from "react-jss";
 import { useSelector } from "react-redux";
 
 import { useStyles } from "./styles";
-import Clouds from "../../images/clouds.png";
+import Page from "../../components/page";
+import Illustration from "../../components/illustration";
 
 function IndexPage() {
   const colorScheme = useSelector((state) => state.theme.colorScheme);
@@ -12,12 +13,9 @@ function IndexPage() {
   const classes = useStyles({ theme, colorScheme });
 
   return (
-    <div className={clsx(classes.pageContainer)}>
-      <div className={clsx(classes.section)}>
-        <div className={clsx(classes.illustration)}>
-          <img src={Clouds} alt="clouds" className="clouds" />
-          <div className="rocket">🚀</div>
-        </div>
+    <Page>
+      <Page.Section>
+        <Illustration name="rocket" />
         <div className={clsx(classes.text)}>
           <h2>Ready for take off!</h2>
           <p>
@@ -25,8 +23,8 @@ function IndexPage() {
             comes with routing and state management already configured.
           </p>
         </div>
-      </div>
-    </div>
+      </Page.Section>
+    </Page>
   );
 }
 
