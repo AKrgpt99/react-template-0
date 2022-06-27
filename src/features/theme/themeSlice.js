@@ -1,8 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   colorScheme: "light",
 };
+
+export const fetchTheme = createAsyncThunk("theme/fetchTheme", () => {});
 
 export const themeSlice = createSlice({
   name: "theme",

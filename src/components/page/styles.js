@@ -7,6 +7,9 @@ export const useStyles = createUseStyles({
       paddingLeft: "24px !important",
       paddingRight: "24px !important",
     },
+    section: {
+      gap: "32px !important",
+    },
   },
   "@media screen and (min-width: 768px)": {},
   "@media screen and (min-width: 1024px)": {},

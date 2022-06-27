@@ -57,13 +57,28 @@ function Header() {
           />
         </div>
         <div className={clsx(classes.menuContainer)}>
-          <button className="menuButton" onClick={() => setShowMenu(!showMenu)}>
+          <button
+            className="menuButton"
+            onClick={() => {
+              document.body.style.overflow = !showMenu ? "hidden" : "unset";
+              setShowMenu(!showMenu);
+            }}
+          >
             <img src={Bars} alt="Enter menu" />
           </button>
           <div className={clsx(classes.menu, showMenu && "show")}>
             <div className={clsx(classes.mobileLinks)}>
               {Object.keys(links).map((path) => (
-                <Link to={path} className={clsx(classes.mobileLink)}>
+                <Link
+                  to={path}
+                  onClick={() => {
+                    document.body.style.overflow = !showMenu
+                      ? "hidden"
+                      : "unset";
+                    setShowMenu(!showMenu);
+                  }}
+                  className={clsx(classes.mobileLink)}
+                >
                   {links[path]}
                 </Link>
               ))}

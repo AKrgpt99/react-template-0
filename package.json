@@ -6,8 +6,8 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
     "dev": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
-    "start": "npm run build && node ./dist/bundle.js"
+    "build": "webpack --mode production --progress",
+    "start": "npm run build && node ./bin/www"
   },
   "keywords": [],
   "author": "",
@@ -44,6 +44,11 @@
     "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.27.2",
     "clsx": "^1.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-jss": "^10.9.0",
