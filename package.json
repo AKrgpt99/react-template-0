@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
-    "dev": "webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --mode development --name client",
     "build": "webpack --mode production --progress",
     "start": "npm run build && node ./bin/www"
   },

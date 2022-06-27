@@ -192,3 +192,4 @@ dist
 
 # Distribution directories
 dist/
+public/scripts/dist/
