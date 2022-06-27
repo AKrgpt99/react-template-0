@@ -4,7 +4,7 @@
 
 <br>
 
-![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/public/logo.svg?raw=true)
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/public/images/logo.svg?raw=true)
 
 <br>
 
