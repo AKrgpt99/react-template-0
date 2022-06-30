@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 export const useStyles = createUseStyles({
   "@media screen and (max-width: 640px)": {
     navLink: {
-      display: "none",
+      display: "none !important",
     },
     switchTheme: {
       display: "none !important",
@@ -22,7 +22,6 @@ export const useStyles = createUseStyles({
       width: "32px",
       height: "32px",
       "& .menuButton": {
-        border: "none",
         background: "none",
         "& img": {
           width: "32px",
@@ -30,6 +29,12 @@ export const useStyles = createUseStyles({
           objectFit: "contain",
         },
       },
+    },
+    socialsContainer: {
+      display: "none !important",
+    },
+    settingsContainer: {
+      display: "none !important",
     },
   },
   "@media screen and (min-width: 768px)": {},
@@ -66,7 +71,7 @@ export const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "end",
     alignItems: "center",
-    gap: "16px",
+    gap: "32px",
     paddingRight: ({ theme }) => theme.spacing.body.right,
   },
   logo: {
@@ -87,24 +92,34 @@ export const useStyles = createUseStyles({
   title: {
     color: ({ theme, colorScheme }) => theme.colors[colorScheme].text,
   },
-  caption: {
-    fontSize: ({ theme }) => theme.fonts.sizes.caption,
-    color: ({ theme, colorScheme }) => theme.colors[colorScheme].caption,
-  },
   switchTheme: {
+    width: "calc(100% - 32px)",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "start",
+    justifyContent: "space-between",
     alignItems: "center",
     gap: "16px",
+    color: ({ theme, colorScheme }) => theme.colors[colorScheme].caption,
+    "& > p": {
+      fontWeight: "600",
+    },
+    paddingLeft: "16px",
+    paddingRight: "16px",
   },
   switchMobileTheme: {
     width: "100%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "end",
+    justifyContent: "space-between",
     alignItems: "center",
     gap: "16px",
+    color: ({ theme, colorScheme }) => theme.colors[colorScheme].caption,
+    "& > button": {
+      border: ({ theme }) => `2px solid ${theme.colors.default.primary}`,
+    },
+    "& > p": {
+      fontWeight: "600",
+    },
   },
   menuContainer: {
     display: "none",
@@ -138,13 +153,119 @@ export const useStyles = createUseStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "start",
-    gap: "16px",
   },
   mobileLink: {
     width: "100%",
-    height: "36px",
+    height: "84px",
     fontWeight: 600,
     borderBottom: ({ theme, colorScheme }) =>
       `1px solid ${theme.colors[colorScheme].text}60`,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    "& > p": {
+      fontWeight: 600,
+    },
+    "& > img": {
+      width: "16px",
+      height: "16px",
+    },
+  },
+  mobileSocials: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "24px",
+    paddingTop: "32px",
+  },
+  socialsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "16px",
+  },
+  socialIcon: {
+    width: "24px",
+    height: "24px",
+    objectFit: "contain",
+  },
+  settingsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+    "& > .settingsButton": {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "8px",
+      background: "transparent",
+    },
+  },
+  settingsIcon: {
+    width: "24px",
+    height: "24px",
+    objectFit: "contain",
+  },
+  settingsCaretIcon: {
+    width: "16px",
+    height: "16px",
+    objectFit: "contain",
+    transition: "all 0.25s ease",
+    "&.rotate": {
+      transform: "rotate(180deg)",
+    },
+  },
+  settingsMenuContainer: {
+    position: "absolute",
+    width: "256px",
+    top: "26px",
+    right: 0,
+    zIndex: 1,
+    paddingTop: "35px",
+    opacity: 0,
+    pointerEvents: "none",
+    transition: "all 0.25s ease",
+    "&.show": {
+      opacity: 1,
+      pointerEvents: "all",
+    },
+  },
+  settingsMenu: {
+    width: "100%",
+    borderTop: ({ theme, colorScheme }) =>
+      `1px solid ${theme.colors[colorScheme].secondary}60`,
+    backgroundColor: ({ theme, colorScheme }) =>
+      theme.colors[colorScheme].background,
+    borderBottomRightRadius: "5px",
+    borderBottomLeftRadius: "5px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    boxShadow: ({ theme, colorScheme }) =>
+      `0px 0px 12px ${theme.colors[colorScheme].secondary}30`,
+  },
+  settingsMenuOption: {
+    width: "calc(100% - 32px)",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "start",
+    alignItems: "center",
+    paddingLeft: "16px",
+    paddingRight: "16px",
+    transition: "all 0.125s ease",
+    borderBottom: ({ theme, colorScheme }) =>
+      `1px solid ${theme.colors[colorScheme].secondary}60`,
+    "&:hover": {
+      backgroundColor: ({ theme, colorScheme }) =>
+        `${theme.colors[colorScheme].secondary}10`,
+    },
   },
 });

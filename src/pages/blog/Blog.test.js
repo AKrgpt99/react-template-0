@@ -1,9 +1,9 @@
 import renderer from "react-test-renderer";
 
-import Page from "./index";
+import BlogPage from "./index";
 
-it("renders the component", () => {
-  const component = renderer.create(<Page />);
+it("renders the page", () => {
+  const component = renderer.create(<BlogPage />);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });

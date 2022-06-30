@@ -13,7 +13,7 @@ function Switch({ checked, onChange }) {
   return (
     <button
       onClick={() => onChange(!checked)}
-      className={clsx(classes.switchContainer)}
+      className={clsx(classes.switchContainer, checked && "checked")}
     >
       <div className={clsx(classes.handle, checked && "checked")}></div>
     </button>
