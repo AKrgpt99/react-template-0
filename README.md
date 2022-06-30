@@ -170,7 +170,7 @@ Coming soon.
 
 #### Dark
 
-![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-0-dark.png?raw=true)
+![alt text](https://github.com/AKrgpt99/react-template-0/blob/main/screenshots/screenshot-6-dark.png?raw=true)
 
 ### Not Found Page
 
