@@ -4,8 +4,8 @@ const initialState = {
   colorScheme: "light",
 };
 
-export const fetchTheme = createAsyncThunk(
-  "theme/fetchTheme",
+export const fetchColorScheme = createAsyncThunk(
+  "darkMode/fetchColorScheme",
   (_, { rejectWithValue }) => {
     try {
       let colorScheme = localStorage.getItem("colorScheme");
@@ -17,8 +17,8 @@ export const fetchTheme = createAsyncThunk(
   }
 );
 
-export const setTheme = createAsyncThunk(
-  "theme/setTheme",
+export const setColorScheme = createAsyncThunk(
+  "darkMode/setColorScheme",
   (colorScheme, { rejectWithValue }) => {
     try {
       if (colorScheme !== "light" && colorScheme !== "dark")
@@ -31,20 +31,20 @@ export const setTheme = createAsyncThunk(
   }
 );
 
-export const themeSlice = createSlice({
-  name: "theme",
+export const darkModeSlice = createSlice({
+  name: "darkMode",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(setTheme.fulfilled, (state, action) => {
+    builder.addCase(setColorScheme.fulfilled, (state, action) => {
       state.colorScheme = action.payload;
     });
-    builder.addCase(fetchTheme.fulfilled, (state, action) => {
+    builder.addCase(fetchColorScheme.fulfilled, (state, action) => {
       state.colorScheme = action.payload;
     });
   },
 });
 
-export const {} = themeSlice.actions;
+export const {} = darkModeSlice.actions;
 
-export default themeSlice.reducer;
+export default darkModeSlice.reducer;

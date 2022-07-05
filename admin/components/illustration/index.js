@@ -4,11 +4,11 @@ import { useTheme } from "react-jss";
 import { useSelector } from "react-redux";
 
 import { useStyles } from "./styles";
-import Rocket from "./Rocket";
-import Astronaut from "./Astronaut";
+import Rocket from "./Rocket.jsx";
+import Astronaut from "./Astronaut.jsx";
 
 function Illustration({ name, width, height, ...extraProps }) {
-  const colorScheme = useSelector((state) => state.theme.colorScheme);
+  const colorScheme = useSelector((state) => state.darkMode.colorScheme);
   const theme = useTheme();
   const classes = useStyles({ theme, colorScheme });
 

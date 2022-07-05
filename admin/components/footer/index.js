@@ -9,7 +9,7 @@ import LogoIcon from "../../images/logo-icon.svg";
 import LogoIconDark from "../../images/logo-icon-dark.svg";
 
 function Footer() {
-  const colorScheme = useSelector((state) => state.theme.colorScheme);
+  const colorScheme = useSelector((state) => state.darkMode.colorScheme);
   const theme = useTheme();
   const classes = useStyles({ theme, colorScheme });
 

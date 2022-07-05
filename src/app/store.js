@@ -1,9 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { setupListeners } from "@reduxjs/toolkit/query";
 
-import themeReducer from "../features/theme/themeSlice";
+import darkModeReducer from "../features/dark-mode/darkModeSlice";
+import { baseApi } from "../services/base-api";
 
 export const store = configureStore({
   reducer: {
-    theme: themeReducer,
+    [baseApi.reducerPath]: baseApi.reducer,
+    darkMode: darkModeReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(baseApi.middleware),
 });
+
+setupListeners(store.dispatch);

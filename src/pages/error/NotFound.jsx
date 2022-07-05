@@ -7,7 +7,7 @@ import { useStyles } from "./styles";
 import Illustration from "../../components/illustration";
 
 function NotFound() {
-  const colorScheme = useSelector((state) => state.theme.colorScheme);
+  const colorScheme = useSelector((state) => state.darkMode.colorScheme);
   const theme = useTheme();
   const classes = useStyles({ theme, colorScheme });
 

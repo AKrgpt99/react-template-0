@@ -1,18 +1,21 @@
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
+  collapse: {
+    display: "unset",
+  },
   "@media screen and (max-width: 640px)": {
-    navLink: {
-      display: "none !important",
-    },
-    switchTheme: {
-      display: "none !important",
-    },
     containerLeft: {
       paddingLeft: "24px !important",
     },
     containerRight: {
       paddingRight: "24px !important",
+    },
+  },
+  "@media screen and (min-width: 768px)": {},
+  "@media screen and (max-width: 1024px)": {
+    collapse: {
+      display: "none !important",
     },
     menuContainer: {
       display: "flex !important",
@@ -30,15 +33,7 @@ export const useStyles = createUseStyles({
         },
       },
     },
-    socialsContainer: {
-      display: "none !important",
-    },
-    settingsContainer: {
-      display: "none !important",
-    },
   },
-  "@media screen and (min-width: 768px)": {},
-  "@media screen and (min-width: 1024px)": {},
   "@media screen and (min-width: 1280px)": {},
   "@media screen and (min-width: 1536px)": {},
   headerContainer: {
@@ -75,9 +70,12 @@ export const useStyles = createUseStyles({
     paddingRight: ({ theme }) => theme.spacing.body.right,
   },
   logo: {
-    "& img": {
+    "& > img": {
       height: "72px",
     },
+  },
+  textLogo: {
+    height: "32px",
   },
   logoContainer: {
     display: "flex",

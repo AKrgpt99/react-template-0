@@ -60,3 +60,18 @@ a {
   text-decoration: none;
   color: var(--primary);
 }
+
+button,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.0625s ease;
+  border: none;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.84;
+}

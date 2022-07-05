@@ -5,10 +5,8 @@ export const useStyles = createUseStyles({
     width: "48px",
     height: "32px",
     borderRadius: "32px",
-    border: ({ theme, colorScheme }) =>
-      `2px solid ${
-        theme.colors[colorScheme === "dark" ? "light" : "dark"].primary
-      }`,
+    border: ({ theme }) =>
+      `2px solid ${theme.colors.default.primary} !important`,
     background: "transparent",
     display: "flex",
     flexDirection: "row",
@@ -16,6 +14,9 @@ export const useStyles = createUseStyles({
     alignItems: "center",
     padding: "2px",
     cursor: "pointer",
+    "&.checked": {
+      backgroundColor: ({ theme }) => `${theme.colors.default.primary}60`,
+    },
   },
   handle: {
     width: "24px",

@@ -1,12 +1,15 @@
 const path = require("path");
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = [
   {
     name: "client",
-    entry: "./src/index.js",
-    mode: "development",
+    entry: {
+      "app.bundle": "./src/index.js",
+      "admin.bundle": "./admin/index.js",
+    },
     module: {
       rules: [
         {
@@ -60,16 +63,18 @@ module.exports = [
       },
     },
     output: {
-      path: path.resolve(__dirname, "public/scripts/dist/"),
-      publicPath: "/scripts/dist/",
-      filename: "bundle.js",
+      path: path.resolve(__dirname, "dist/"),
+      publicPath: "/dist/",
+      filename: "[name].js",
     },
     devServer: {
-      port: 3000,
-      static: {
-        directory: path.join(__dirname, "public"),
-        serveIndex: true,
-      },
+      port: 3001,
+      static: [
+        {
+          directory: path.join(__dirname, "public"),
+          serveIndex: true,
+        },
+      ],
       historyApiFallback: true,
     },
     plugins: [
@@ -78,9 +83,11 @@ module.exports = [
     ],
   },
   {
-    name: "admin",
-    entry: "./admin/index.js",
-    mode: "development",
+    name: "server",
+    entry: {
+      "server.bundle": "./bin/www",
+    },
+    target: "node",
     module: {
       rules: [
         {
@@ -119,36 +126,15 @@ module.exports = [
         },
       ],
     },
-    resolve: {
-      extensions: ["*", ".js", ".jsx"],
-      fallback: {
-        fs: false,
-        stream: require.resolve("stream-browserify"),
-        buffer: require.resolve("buffer/"),
-        util: require.resolve("util/"),
-        assert: require.resolve("assert/"),
-        http: require.resolve("stream-http/"),
-        url: require.resolve("url/"),
-        https: require.resolve("https-browserify/"),
-        os: require.resolve("os-browserify/"),
-      },
+    externals: [nodeExternals()],
+    node: {
+      __dirname: false,
     },
     output: {
-      path: path.resolve(__dirname, "public/scripts/dist/"),
-      publicPath: "/scripts/dist/",
-      filename: "bundle.admin.js",
+      path: path.resolve(__dirname, "dist/"),
+      publicPath: "/dist/",
+      filename: "[name].js",
     },
-    devServer: {
-      port: 3001,
-      static: {
-        directory: path.join(__dirname, "public"),
-        serveIndex: true,
-      },
-      historyApiFallback: true,
-    },
-    plugins: [
-      new webpack.ProvidePlugin({ Buffer: ["buffer", "Buffer"] }),
-      new Dotenv(),
-    ],
+    plugins: [new Dotenv()],
   },
 ];

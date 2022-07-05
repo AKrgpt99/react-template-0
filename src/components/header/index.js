@@ -6,50 +6,75 @@ import { Link } from "react-router-dom";
 
 import { useStyles } from "./styles";
 import Logo from "../../images/logo.svg";
+import Space3Logo from "../../images/space3.svg";
+import Space3LogoDark from "../../images/space3-dark.svg";
 import LogoDark from "../../images/logo-dark.svg";
 import Switch from "../switch";
-import { setTheme } from "../../features/theme/themeSlice";
+import { setColorScheme } from "../../features/dark-mode/darkModeSlice";
 import Bars from "../../icons/bars.svg";
 import TwitterIcon from "../../icons/twitter.svg";
 import DiscordIcon from "../../icons/discord.svg";
 import OpenSeaIcon from "../../icons/opensea.svg";
 import CaretRightIcon from "../../icons/caret-right.svg";
 import Searchbar from "../searchbar";
+// import { useGetAllMenusQuery } from "../../services/menus";
 
 function Header() {
   const dispatch = useDispatch();
-  const colorScheme = useSelector((state) => state.theme.colorScheme);
+  const colorScheme = useSelector((state) => state.darkMode.colorScheme);
   const theme = useTheme();
   const classes = useStyles({ theme, colorScheme });
   const [showMenu, setShowMenu] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  // const { data, error } = useGetAllMenusQuery();
+  // if (error) return;
+
+  // const linksMenu = data.filter((menu) => menu.name === "links");
+  // const socialsMenu = data.filter((menu) => menu.name === "socials");
+  // const settingsMenu = data.filter((menu) => menu.name === "settings");
 
   const linksMenu = [
-    { path: "blog", name: "Blog" },
-    { path: "products", name: "Products" },
+    {
+      path: "blog",
+      name: "Blog",
+      icon: null,
+    },
+    {
+      path: "products",
+      name: "Products",
+      icon: null,
+    },
   ];
 
   const socialsMenu = [
     {
       name: "Discord",
-      href: "#",
+      path: "#",
       icon: DiscordIcon,
     },
     {
       name: "Twitter",
-      href: "#",
+      path: "#",
       icon: TwitterIcon,
     },
     {
       name: "OpenSea",
-      href: "#",
+      path: "#",
       icon: OpenSeaIcon,
     },
   ];
 
   const settingsMenu = [
-    { path: "search", name: "Categories" },
-    { path: "search", name: "Tags" },
+    {
+      path: "search",
+      name: "Categories",
+      icon: null,
+    },
+    {
+      path: "search",
+      name: "Tags",
+      icon: null,
+    },
   ];
 
   return (
@@ -63,26 +88,33 @@ function Header() {
             />
           </div>
           <div>
-            <h1 className={clsx(classes.title)}>SPACEIII</h1>
+            <img
+              src={colorScheme === "dark" ? Space3Logo : Space3LogoDark}
+              className={classes.textLogo}
+            />
           </div>
         </Link>
         {linksMenu.map((link, i) => (
-          <Link to={link.path} key={i} className={clsx(classes.navLink)}>
+          <Link
+            to={link.path}
+            key={i}
+            className={clsx(classes.navLink, classes.collapse)}
+          >
             {link.name}
           </Link>
         ))}
       </div>
       <div className={clsx(classes.containerRight)}>
-        <Searchbar width="384px" />
-        <div className={clsx(classes.socialsContainer)}>
+        <Searchbar width="384px" className={clsx(classes.collapse)} />
+        <div className={clsx(classes.socialsContainer, classes.collapse)}>
           {socialsMenu.map((social, i) => (
-            <a key={i} href={social.href}>
+            <a key={i} href={social.path}>
               <img className={clsx(classes.socialIcon)} src={social.icon} />
             </a>
           ))}
         </div>
         <div
-          className={clsx(classes.settingsContainer)}
+          className={clsx(classes.settingsContainer, classes.collapse)}
           onMouseEnter={() => setShowSettings(true)}
           onMouseLeave={() => setShowSettings(false)}
         >
@@ -112,11 +144,11 @@ function Header() {
                   <p>{link.name}</p>
                 </Link>
               ))}
-              <div className={clsx(classes.switchTheme)}>
+              <div className={clsx(classes.switchTheme, classes.collapse)}>
                 <p>Dark mode</p>
                 <Switch
                   onChange={(checked) =>
-                    dispatch(setTheme(checked ? "dark" : "light"))
+                    dispatch(setColorScheme(checked ? "dark" : "light"))
                   }
                   checked={colorScheme === "dark" ? true : false}
                 />
@@ -174,14 +206,14 @@ function Header() {
               <p>Dark mode</p>
               <Switch
                 onChange={(checked) =>
-                  dispatch(setTheme(checked ? "dark" : "light"))
+                  dispatch(setColorScheme(checked ? "dark" : "light"))
                 }
                 checked={colorScheme === "dark" ? true : false}
               />
             </div>
             <div className={clsx(classes.mobileSocials)}>
               {socialsMenu.map((social, i) => (
-                <a key={i} href={social.href}>
+                <a key={i} href={social.path}>
                   <img className={clsx(classes.socialIcon)} src={social.icon} />
                 </a>
               ))}

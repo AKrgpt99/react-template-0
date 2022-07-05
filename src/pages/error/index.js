@@ -1,7 +1,7 @@
 import React from "react";
 
 import Page from "../../components/page";
-import NotFound from "./NotFound";
+import NotFound from "./NotFound.jsx";
 
 function NotFoundPage({ code }) {
   const views = {

@@ -9,7 +9,7 @@ import Page from "../../components/page";
 import Illustration from "../../components/illustration";
 
 function IndexPage() {
-  const colorScheme = useSelector((state) => state.theme.colorScheme);
+  const colorScheme = useSelector((state) => state.darkMode.colorScheme);
   const theme = useTheme();
   const classes = useStyles({ theme, colorScheme });
 

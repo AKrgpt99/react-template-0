@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { useStyles } from "./styles";
 
 function Switch({ checked, onChange }) {
-  const colorScheme = useSelector((state) => state.theme.colorScheme);
+  const colorScheme = useSelector((state) => state.darkMode.colorScheme);
   const theme = useTheme();
   const classes = useStyles({ theme, colorScheme });
 
